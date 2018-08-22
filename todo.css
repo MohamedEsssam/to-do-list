@@ -1,0 +1,186 @@
+
+body {
+    background: #edf0f1;
+    padding: 80px 0 0 0;
+  }
+
+  body , input  , button , li{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+  }
+header{
+    background: rgba(0, 69, 182,.7);
+    width: 100%;
+    height: 150px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    box-shadow: 0px 2px 4px rgba(44, 62, 80, 0.15);
+   border-bottom-right-radius: 10px;
+   border-bottom-left-radius: 10px;
+   padding: 15px;
+  
+}
+header input{
+position: relative;
+top:13%;
+left: 5%; 
+ width: 80%;
+ height: 100px;
+ float: left;
+ color: white;
+ font-size: 23px;
+ font-weight: 400;
+ text-indent: 15px;
+ padding: 0 60px 0 0;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 5px 25px 25px 5px;
+  border: 0px;
+  outline:none;
+}
+input::-webkit-input-placeholder{
+    color: rgba(255, 255, 255, 0.75);
+}
+header button{
+    width: 100px;
+    height: 100px;
+    position: relative;
+    top: 13%;
+    right: 10px;
+    border-radius: 50%;
+    border: none;
+    background: white;
+    cursor: pointer;
+    z-index: 5;
+    font-weight: bold;
+    font-size: 50px;
+    text-align: center;
+    color:  rgba(0, 69, 182,.7);
+    transition: 1s;
+    outline:none;    
+}
+header button:hover{
+    background: rgb(89, 129, 240);
+    color: white;
+}
+ul.todo{
+  list-style: none;
+  position: absolute;
+  top: 35%;
+  left: 5%;
+  width: 80%;
+  height: 100px;
+}
+ul.todo li{
+    position: relative;
+  width: 80%;
+  height: 100px;
+  float: left;
+  color: black;
+  font-size: 23px;
+  font-weight: 400;
+  text-indent: 15px;
+  padding: 0 60px 0 0;
+  background: rgba(255, 255, 255, 0.815);
+  border-radius: 5px 25px 25px 5px;
+  border: 0px;
+  line-height: 90px;
+  margin: 5px;
+  
+}
+ul.todo li button{
+    content: "x";
+    width:30px;
+    height:30px;
+    border-radius:50px;
+    border: 0;
+    position: absolute;
+    top: 7px;
+    left:90%;    
+}
+ul li .remove::before{
+    content: "X";
+    color: red;
+}
+ul li .complete::before{
+    content: "✔";
+    color: blue;
+}
+
+ul.todo li .remove{
+    content: "X";
+    position: absolute;
+    top: 31px;
+    left :830px;
+    font-weight: bold;
+    text-align: center;
+    outline: none;
+    transition: 1s;
+    cursor: pointer;
+}
+ul.todo li .remove:hover {
+background: rgba(255, 1, 1, 0.61);
+color:white;
+}
+.remove:hover::before {
+    color:white;
+    }
+    .complete:hover::before {
+        color:white;
+        }
+    
+
+ul.todo li .complete{
+    content: "✔";
+    position: absolute;
+    top: 31px;
+    left:887px;
+    font-weight: bold;
+    text-align: center;
+    outline:none;
+    transition: 1s;
+    cursor: pointer;
+    
+}
+ul.todo li .complete:hover{
+    background: rgba(6, 6, 250, 0.61);
+    color: white;
+}
+ul.todo li .line{
+    position: absolute;
+    left: 93.38%;
+    top:25%;
+    border-left: 1px solid rgb(164, 168, 164);
+    width:10px;
+    height: 40px;
+    opacity: .3;
+}
+ul.todo li .text{
+    background:rgba(255, 255, 255, 0.815);
+    position: absolute;
+    top: 22px;
+    width: 71%;
+    padding-top: 10px;
+    border: none;
+    outline: none;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow: hidden;
+    resize: none;
+    
+}
+@keyframes animate{
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(-1070px);
+    }
+}
+@keyframes big{
+    0%{
+        transform:scale(0) 
+    }
+    100%{
+        transform:scale(2); 
+    }
+}
