@@ -120,6 +120,7 @@ ul.todo li .remove{
 ul.todo li .remove:hover {
 background: rgba(255, 1, 1, 0.61);
 color:white;
+animation: big 2s;
 }
 .remove:hover::before {
     color:white;
@@ -144,6 +145,7 @@ ul.todo li .complete{
 ul.todo li .complete:hover{
     background: rgba(6, 6, 250, 0.61);
     color: white;
+    animation: big 2s;
 }
 ul.todo li .line{
     position: absolute;
@@ -166,8 +168,11 @@ ul.todo li .text{
     font-family: Arial, Helvetica, sans-serif;
     overflow: hidden;
     resize: none;
-    
 }
+ul.todo li .text:hover{
+    animation: bigq 2s;
+}
+
 @keyframes animate{
     0%{
         transform: translateX(0);
@@ -178,9 +183,17 @@ ul.todo li .text{
 }
 @keyframes big{
     0%{
-        transform:scale(0) 
+        transform:scale(1) 
     }
     100%{
         transform:scale(2); 
     }
+}
+    @keyframes bigq{
+        0%{
+            transform:scale(1) 
+        }
+        100%{
+            transform:scale(1.3); 
+        }
 }
